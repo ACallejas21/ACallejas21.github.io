@@ -219,6 +219,39 @@
   }
   .filter-note{font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--ink-faint);margin:16px 0 0}
 
+  /* ---------- client work (contributed) ---------- */
+  .contribution-note{
+    background:var(--sage-soft);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 24px;margin:0 0 28px;
+  }
+  .contribution-note .cn-label{
+    font-family:"JetBrains Mono",monospace;font-size:.74rem;font-weight:700;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin:0 0 6px;
+  }
+  .contribution-note p{margin:0;color:var(--ink-soft);font-size:.97rem;max-width:52rem}
+  .contribution-note p strong{color:var(--ink)}
+  .client-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:1024px){ .client-grid{grid-template-columns:1fr 1fr} }
+  @media (max-width:640px){ .client-grid{grid-template-columns:1fr} }
+  .client-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;display:flex;flex-direction:column;gap:9px;
+  }
+  .client-card .client-kicker{
+    font-family:"JetBrains Mono",monospace;font-size:.72rem;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--sage);
+    display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin:0;
+  }
+  .client-kicker .live{color:var(--accent-ink);letter-spacing:.04em;text-transform:none;font-size:.76rem;white-space:nowrap}
+  .client-card h3{margin:0;font-size:1.22rem;font-weight:800;letter-spacing:-.015em;line-height:1.25}
+  .client-card p{margin:0;color:var(--ink-soft);font-size:.93rem}
+  .client-card .tags{margin-top:2px;padding-top:4px}
+  .client-link{
+    margin-top:auto;padding-top:14px;font-weight:700;font-size:.95rem;
+    text-decoration:none;color:var(--accent-ink);word-break:break-all;
+  }
+  .client-link:hover{text-decoration:underline}
+
   /* ---------- highlights (dark band) ---------- */
   .band{background:var(--dark);color:var(--dark-ink);border-radius:20px;padding:46px 42px 30px;margin-top:64px}
   @media (max-width:640px){ .band{padding:34px 22px 18px;border-radius:16px} }
@@ -302,6 +335,7 @@
     <a class="brand" href="#top">Akdiel Callejas<span>.</span></a>
     <nav class="topnav" aria-label="Sections">
       <a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
+      <a href="#client-work" data-en="Client work" data-es="Clientes">Client work</a>
       <a href="#highlights" data-en="Highlights" data-es="Logros">Highlights</a>
       <a href="#stack" data-en="Stack" data-es="Stack">Stack</a>
       <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
@@ -540,6 +574,119 @@
       </article>
     </div>
     <p class="filter-note" id="filterNote"></p>
+  </section>
+
+  <!-- ================= CLIENT WORK (CONTRIBUTED) ================= -->
+  <section class="wrap" id="client-work">
+    <p class="sec-label" data-en="Client work" data-es="Trabajo con clientes">Client work</p>
+    <h2 data-en="Projects I contributed to" data-es="Proyectos en los que participé">Projects I contributed to</h2>
+    <p class="sec-intro" data-en="Nine live production sites for real-estate, construction, tourism and services companies in Honduras, built with React, Next.js and TypeScript — with interactive maps, 3D scenes, online payments, authentication and multi-language content, plus the admin panels and APIs behind them." data-es="Nueve sitios en producción para empresas inmobiliarias, de construcción, turismo y servicios en Honduras, hechos con React, Next.js y TypeScript — con mapas interactivos, escenas 3D, pagos en línea, autenticación y contenido en varios idiomas, además de los paneles de administración y las APIs que los conectan.">Nine live production sites for real-estate, construction, tourism and services companies in Honduras, built with React, Next.js and TypeScript — with interactive maps, 3D scenes, online payments, authentication and multi-language content, plus the admin panels and APIs behind them.</p>
+
+    <div class="contribution-note">
+      <p class="cn-label" data-en="Shared credit" data-es="Crédito compartido">Shared credit</p>
+      <p data-en="These are &lt;strong&gt;client projects I worked on as a contributing developer — not solo builds&lt;/strong&gt;. I built and maintained significant parts of each site together with the team behind it: my participation was real, but it was not 100% mine, and the credit is shared." data-es="Estos son &lt;strong&gt;proyectos de clientes en los que trabajé como desarrollador colaborador, no desarrollos en solitario&lt;/strong&gt;. Construí y mantuve partes importantes de cada sitio junto al equipo detrás de él: mi participación fue real, pero no fue 100% mía, y el crédito es compartido.">These are <strong>client projects I worked on as a contributing developer — not solo builds</strong>. I built and maintained significant parts of each site together with the team behind it: my participation was real, but it was not 100% mine, and the credit is shared.</p>
+    </div>
+
+    <div class="client-grid">
+      <!-- 1. Constructora Erazo -->
+      <article class="client-card">
+        <p class="client-kicker"><span data-en="Construction · Corporate" data-es="Construcción · Corporativo">Construction · Corporate</span><span class="live" data-en="Live site" data-es="Sitio en vivo">Live site</span></p>
+        <h3>Constructora Erazo</h3>
+        <p data-en="Corporate site for the construction company, with home and “About us” sections, in two languages." data-es="Sitio corporativo de la constructora, con inicio y “Nosotros”, en dos idiomas.">Corporate site for the construction company, with home and “About us” sections, in two languages.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">MUI</span><span class="tag">Redux Toolkit</span><span class="tag">Firebase</span><span class="tag">i18next</span>
+        </div>
+        <a class="client-link" href="https://www.constructoraerazo.com" target="_blank" rel="noopener">constructoraerazo.com ↗</a>
+      </article>
+
+      <!-- 2. Agua El Manantial -->
+      <article class="client-card">
+        <p class="client-kicker"><span data-en="Services · Water &amp; gardening" data-es="Servicios · Agua y jardinería">Services · Water &amp; gardening</span><span class="live" data-en="Live site" data-es="Sitio en vivo">Live site</span></p>
+        <h3>Servicios de Agua El Manantial</h3>
+        <p data-en="Site for a drinking-water and gardening service in Siguatepeque, with an EmailJS contact form, carousels and animations." data-es="Sitio de un servicio de agua potable y jardinería en Siguatepeque, con formulario de contacto con EmailJS, carruseles y animaciones.">Site for a drinking-water and gardening service in Siguatepeque, with an EmailJS contact form, carousels and animations.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">MUI</span><span class="tag">Framer Motion</span><span class="tag">Swiper</span><span class="tag">EmailJS</span><span class="tag">Firebase</span>
+        </div>
+        <a class="client-link" href="https://serviciosdeaguaelmanantial.com" target="_blank" rel="noopener">serviciosdeaguaelmanantial.com ↗</a>
+      </article>
+
+      <!-- 3. Buena Vista -->
+      <article class="client-card">
+        <p class="client-kicker"><span data-en="Real estate · Development" data-es="Inmobiliaria · Urbanístico">Real estate · Development</span><span class="live" data-en="Live site" data-es="Sitio en vivo">Live site</span></p>
+        <h3>Buena Vista</h3>
+        <p data-en="Site for an urban development with country and residential lots: interactive lot map, direct-financing information and SEO." data-es="Sitio de un proyecto urbanístico con lotes campestres y residenciales: mapa interactivo de lotes, información de financiamiento directo y SEO.">Site for an urban development with country and residential lots: interactive lot map, direct-financing information and SEO.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">MUI</span>
+        </div>
+        <a class="client-link" href="https://buenavistasiguatepeque.hn" target="_blank" rel="noopener">buenavistasiguatepeque.hn ↗</a>
+      </article>
+
+      <!-- 4. M&N -->
+      <article class="client-card">
+        <p class="client-kicker"><span data-en="Architecture · Engineering" data-es="Arquitectura · Ingeniería">Architecture · Engineering</span><span class="live" data-en="Live site" data-es="Sitio en vivo">Live site</span></p>
+        <h3>M&amp;N Diseño &amp; Construcción</h3>
+        <p data-en="Site for an architecture, engineering and topography firm, with a project portfolio and contact form." data-es="Sitio de una firma de arquitectura, ingeniería y topografía, con portafolio de proyectos y formulario de contacto.">Site for an architecture, engineering and topography firm, with a project portfolio and contact form.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">MUI</span><span class="tag">Framer Motion</span><span class="tag">Swiper</span><span class="tag">EmailJS</span>
+        </div>
+        <a class="client-link" href="https://www.mningenieroshn.com" target="_blank" rel="noopener">mningenieroshn.com ↗</a>
+      </article>
+
+      <!-- 5. Villas de Siguatepeque -->
+      <article class="client-card">
+        <p class="client-kicker"><span data-en="Real estate · Platform" data-es="Inmobiliaria · Plataforma">Real estate · Platform</span><span class="live" data-en="Live site" data-es="Sitio en vivo">Live site</span></p>
+        <h3>Villas de Siguatepeque <span style="font-weight:600;color:var(--ink-faint);font-size:.85em">(Novagroup)</span></h3>
+        <p data-en="Real-estate platform with a catalog of lots and residences on an interactive map and 3D scenes. Registration and login with email verification, sales form and online payment via Banco Atlántida." data-es="Plataforma inmobiliaria con catálogo de lotes y residencias en mapa interactivo y escenas 3D. Registro y login de usuarios con verificación de correo, formulario de ventas y pago en línea por Banco Atlántida.">Real-estate platform with a catalog of lots and residences on an interactive map and 3D scenes. Registration and login with email verification, sales form and online payment via Banco Atlántida.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">MUI</span><span class="tag">Leaflet</span><span class="tag">MapLibre</span><span class="tag">React Three Fiber</span><span class="tag">Redux</span><span class="tag">i18next</span>
+        </div>
+        <a class="client-link" href="https://www.villasiguatepeque.com" target="_blank" rel="noopener">villasiguatepeque.com ↗</a>
+      </article>
+
+      <!-- 6. Northview Roatán -->
+      <article class="client-card">
+        <p class="client-kicker"><span data-en="Real estate · Platform" data-es="Inmobiliaria · Plataforma">Real estate · Platform</span><span class="live" data-en="Live site" data-es="Sitio en vivo">Live site</span></p>
+        <h3>Northview Roatán</h3>
+        <p data-en="Real-estate platform in Roatán with lots, houses and condos. Online lot reservation with payment links (PlacetoPay and Banco Atlántida), client portal, exclusive offers, FAQ, maps and 3D scenes — in two languages." data-es="Plataforma inmobiliaria en Roatán con lotes, casas y condominios. Reserva de lotes en línea con links de pago (PlacetoPay y Banco Atlántida), portal de clientes, ofertas exclusivas, preguntas frecuentes, mapas y escenas 3D — en dos idiomas.">Real-estate platform in Roatán with lots, houses and condos. Online lot reservation with payment links (PlacetoPay and Banco Atlántida), client portal, exclusive offers, FAQ, maps and 3D scenes — in two languages.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">MUI</span><span class="tag">Three.js</span><span class="tag">React Three Fiber</span><span class="tag">Leaflet</span><span class="tag">MapLibre</span><span class="tag">Redux</span><span class="tag">i18next</span>
+        </div>
+        <a class="client-link" href="https://www.northviewroatan.com" target="_blank" rel="noopener">northviewroatan.com ↗</a>
+      </article>
+
+      <!-- 7. Los Jarros -->
+      <article class="client-card">
+        <p class="client-kicker"><span data-en="Real estate · Residential" data-es="Inmobiliaria · Residencial">Real estate · Residential</span><span class="live" data-en="Live site" data-es="Sitio en vivo">Live site</span></p>
+        <h3>Residencial Los Jarros</h3>
+        <p data-en="Site for a residential development with exclusive lots: lots and amenities, plus registration and login with account verification. In two languages." data-es="Sitio de un residencial con terrenos exclusivos: lotes y amenidades, más registro y login de usuarios con verificación de cuenta. En dos idiomas.">Site for a residential development with exclusive lots: lots and amenities, plus registration and login with account verification. In two languages.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">MUI</span><span class="tag">Redux</span><span class="tag">i18next</span><span class="tag">Swiper</span>
+        </div>
+        <a class="client-link" href="https://www.losjarroshn.com" target="_blank" rel="noopener">losjarroshn.com ↗</a>
+      </article>
+
+      <!-- 8. Grupo Innovar HN -->
+      <article class="client-card">
+        <p class="client-kicker"><span data-en="Corporate · Group portal" data-es="Corporativo · Portal del grupo">Corporate · Group portal</span><span class="live" data-en="Live site" data-es="Sitio en vivo">Live site</span></p>
+        <h3>Grupo Innovar HN</h3>
+        <p data-en="Corporate site for the group, acting as a portal to its projects: Villas Siguatepeque, Northview, Agua El Manantial, Constructora Erazo and more." data-es="Sitio corporativo del grupo, como portal hacia sus proyectos: Villas Siguatepeque, Northview, Agua El Manantial, Constructora Erazo y otros.">Corporate site for the group, acting as a portal to its projects: Villas Siguatepeque, Northview, Agua El Manantial, Constructora Erazo and more.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">MUI</span>
+        </div>
+        <a class="client-link" href="https://www.grupoinnovarhn.com" target="_blank" rel="noopener">grupoinnovarhn.com ↗</a>
+      </article>
+
+      <!-- 9. Sunset House -->
+      <article class="client-card">
+        <p class="client-kicker"><span data-en="Tourism · Hospitality" data-es="Turismo · Hospitalidad">Tourism · Hospitality</span><span class="live" data-en="Live site" data-es="Sitio en vivo">Live site</span></p>
+        <h3>Sunset House</h3>
+        <p data-en="Site for a tourism complex with restaurant, menu, events, reservations, tourism and a nursery, plus user sign-in." data-es="Sitio de un complejo turístico con restaurante, menú, eventos, reservaciones, turismo y vivero, más inicio de sesión.">Site for a tourism complex with restaurant, menu, events, reservations, tourism and a nursery, plus user sign-in.</p>
+        <div class="tags">
+          <span class="tag">Next.js (App Router)</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">Redux</span><span class="tag">Framer Motion</span><span class="tag">Firebase</span>
+        </div>
+        <a class="client-link" href="https://www.sunsethousehn.com" target="_blank" rel="noopener">sunsethousehn.com ↗</a>
+      </article>
+    </div>
   </section>
 
   <!-- ================= HIGHLIGHTS ================= -->
